@@ -1,95 +1,102 @@
-import Image from "next/image";
+'use client'
+
 import styles from "./page.module.css";
+import { ChangeEvent, useId, useState } from "react";
+import { Check, Trash } from 'lucide-react';
+
+// interface Task {
+//   label: string;
+//   isDone: boolean;
+// }
 
 export default function Home() {
+  const handleInputChange = (event:ChangeEvent<HTMLInputElement>) => {
+    // insert your code here
+  }
+
+  const handleCreateTask = () => {
+    // insert your code here
+  }
+
+  const handleDeleteTask = () => {
+    // insert your code here
+  }
+
+  const handleDoneTask = () => {
+    // insert your code here
+  }
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <h1>Todo App</h1>
+
+      <div className={styles.form}>
+        <input 
+          id="task" 
+          name="task" 
+          placeholder="Add new task" 
+        /> 
+
+        <button type="button" onClick={handleCreateTask}>Criar</button>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className={styles.tasks}>
+        <h2>Atividades</h2>
+        <span>1/4</span>
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <ul>
+        <li data-isDone={false} className={styles.task}>
+          <span>Task 1</span>
+          <div>             
+            <button 
+              onClick={() => handleDoneTask()} 
+              className={styles.taskBtnDone}>
+                <Check />
+            </button>
+                          
+            <button  
+              onClick={() => handleDeleteTask()}                
+              className={styles.taskBtnDelete}>
+                <Trash />
+              </button>
+          </div>
+        </li>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <li data-isDone={false} className={styles.task}>
+          <span>Task 2</span>
+          <div>             
+            <button 
+              onClick={() => handleDoneTask()} 
+              className={styles.taskBtnDone}>
+                <Check />
+            </button>
+                          
+            <button  
+              onClick={() => handleDeleteTask()}                
+              className={styles.taskBtnDelete}>
+                <Trash />
+              </button>
+          </div>
+        </li>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <li data-isDone={false} className={styles.task}>
+          <span>Task 3</span>
+          <div>             
+            <button 
+              onClick={() => handleDoneTask()} 
+              className={styles.taskBtnDone}>
+                <Check />
+            </button>
+                          
+            <button  
+              onClick={() => handleDeleteTask()}                
+              className={styles.taskBtnDelete}>
+                <Trash />
+              </button>
+          </div>
+        </li>
+      </ul>
     </main>
   );
 }
