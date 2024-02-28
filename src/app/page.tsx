@@ -37,7 +37,7 @@ export default function Home() {
           placeholder="Add new task" 
         /> 
 
-        <button type="button" onClick={handleCreateTask}>Criar</button>
+        <button type="button" onClick={() => {}}>Criar</button>
       </div>
 
       <div className={styles.tasks}>
@@ -50,13 +50,13 @@ export default function Home() {
           <span>Task 1</span>
           <div>             
             <button 
-              onClick={() => handleDoneTask()} 
+              onClick={() => {}}
               className={styles.taskBtnDone}>
                 <Check />
             </button>
                           
             <button  
-              onClick={() => handleDeleteTask()}                
+              onClick={() => {}}
               className={styles.taskBtnDelete}>
                 <Trash />
               </button>
@@ -67,7 +67,7 @@ export default function Home() {
           <span>Task 2</span>
           <div>             
             <button 
-              onClick={() => handleDoneTask()} 
+              onClick={() => {}}
               className={styles.taskBtnDone}>
                 <Check />
             </button>
