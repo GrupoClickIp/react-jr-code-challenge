@@ -2,8 +2,14 @@
 
 #### Clone the project
 
+via HTTPS
 ```shell
-git clone 
+git clone https://github.com/GrupoClickIp/react-code-challenge-jr.git
+```
+
+via SSH
+```shell
+git@github.com:GrupoClickIp/react-code-challenge-jr.git
 ```
 
 #### Install dependencies
@@ -23,3 +29,6 @@ npm run dev
 - To create a new task
 - To set a task as done
 - To delete a task
+- To show total tasks
+- To show total tasks are set as done
+- To hide Check button when the task is set as done
