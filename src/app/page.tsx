@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       <ul>
-        <li data-isDone={false} className={styles.task}>
+        <li data-isdone={false} className={styles.task}>
           <span>Task 1</span>
           <div>             
             <button 
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </li>
 
-        <li data-isDone={false} className={styles.task}>
+        <li data-isdone={false} className={styles.task}>
           <span>Task 2</span>
           <div>             
             <button 
@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </li>
 
-        <li data-isDone={false} className={styles.task}>
+        <li data-isdone={false} className={styles.task}>
           <span>Task 3</span>
           <div>             
             <button 
