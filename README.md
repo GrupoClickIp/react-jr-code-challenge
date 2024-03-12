@@ -32,3 +32,7 @@ npm run dev
 - To show total tasks
 - To show total tasks are set as done
 - To hide Check button when the task is set as done
+
+#### Tips
+
+- to manage the state of task list you should use useState();
