@@ -9,7 +9,7 @@ git clone https://github.com/GrupoClickIp/react-code-challenge-jr.git
 
 via SSH
 ```shell
-git@github.com:GrupoClickIp/react-code-challenge-jr.git
+git clone git@github.com:GrupoClickIp/react-jr-code-challenge.git
 ```
 
 #### Install dependencies
